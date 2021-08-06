@@ -1,0 +1,65 @@
+﻿<Window x:Class="Phone_Book.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Phone Book" Height="484" Width="1139">
+    <Grid>
+        <Button x:Name="LoadP_BTN" 
+            Content="Load Profile" HorizontalAlignment="Left" Margin="740,414,0,0" VerticalAlignment="Top" Width="115" Click="LoadP_BTN_Click"
+            />
+        <Button x:Name="DeleteP_BTN" 
+            Content="Delete Profile" HorizontalAlignment="Left" Margin="890,414,0,0" VerticalAlignment="Top" Width="115" IsEnabled="False" Click="DeleteP_BTN_Click"
+            
+            />
+        <Button x:Name="SaveP_BTN" 
+            Content="Save Profile" HorizontalAlignment="Left" Margin="590,414,0,0" VerticalAlignment="Top" Width="115" Click="SaveP_BTN_Click"
+            />
+        <Label Content="Name" HorizontalAlignment="Left" Margin="32,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Name_TXT" 
+                 HorizontalAlignment="Left" Margin="190,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="26"
+                 />
+        <Label Content="Address" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Address_TXT" 
+                HorizontalAlignment="Left" Margin="190,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="60"
+                />
+        <Label Content="Telephone number" HorizontalAlignment="Left" Margin="32,219,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Telephone_TXT" 
+            HorizontalAlignment="Left" Margin="190,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="26"
+                />
+        <Label Content="E-mail address" HorizontalAlignment="Left" Margin="32,279,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Email_TXT" 
+            HorizontalAlignment="Left" Margin="190,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="26"
+                />
+        <Label Content="Other" HorizontalAlignment="Left" Margin="32,339,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Other_TXT" 
+            HorizontalAlignment="Left" Margin="190,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="26"
+                />
+        <Button x:Name="Save_BTN" 
+            Content="Save Contact" HorizontalAlignment="Left" Margin="190,414,0,0" VerticalAlignment="Top" Width="109" Click="Save_BTN_Click"
+            />
+        <Button x:Name="Delete_BTN" 
+            Content="Delete Contact" HorizontalAlignment="Left" Margin="646,360,0,0" VerticalAlignment="Top" Width="109" Click="Delete_BTN_Click"
+            />
+        <Button x:Name="Clear_BTN" 
+            Content="Clear Contacts" HorizontalAlignment="Left" Margin="314,414,0,0" VerticalAlignment="Top" Width="109" Click="Clear_BTN_Click"
+            />
+        <Label x:Name="Welcome_L" Content="" HorizontalAlignment="Left" Margin="32,16,0,0" VerticalAlignment="Top" Width="368"/>
+
+        <DataGrid x:Name="data_grid" Margin="480,65,59,116" AutoGeneratingColumn="data_grid_AutoGeneratingColumn" IsReadOnly="True"/>
+
+        <Label Content="Search: " HorizontalAlignment="Left" Margin="480,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Search_TXT" 
+            HorizontalAlignment="Left" Margin="555,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="525" Height="22" KeyDown="Search_TXT_KeyDown"
+            />
+        <Button x:Name="Edit_BTN" 
+            Content="Edit Contact" HorizontalAlignment="Left" Margin="816,360,0,0" VerticalAlignment="Top" Width="109" Click="Edit_BTN_Click" 
+            />
+        <Button x:Name="Update_BTN" 
+            Content="Update from database" HorizontalAlignment="Left" Margin="32,414,0,0" VerticalAlignment="Top" Width="128" Click="Update_BTN_Click" 
+            />
+
+
+    </Grid>
+</Window>
